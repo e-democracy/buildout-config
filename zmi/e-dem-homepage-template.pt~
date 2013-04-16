@@ -42,10 +42,10 @@
 
           <h2>Latest Photos</h2>
           <div id="pics">
-            <p>Loading the latest photos&#8230;</p>
+            <p>Loading the latest photos…</p>
 
           </div><!--pics-->
-          <p><a title="Next 20 photos and files on this site" href="s/index.html?s=&amp;g=&amp;a=&amp;m=&amp;t=0&amp;p=0&amp;f=1&amp;r=0&amp;i=0&amp;l=20">More photos/files from 50+ forums&#8230;</a></p>
+          <p><a title="Next 20 photos and files on this site" href="s/index.html?s=&g=&a=&m=&t=0&p=0&f=1&r=0&i=0&l=20">More photos/files from 50+ forums…</a></p>
         </div><!--latestPhotos-->
         <p></p>
 
@@ -62,7 +62,7 @@
               Loading the topics
             </p><!--gs-search-topic-site-home-loading-->
             <div id="gs-search-topic-site-home-latest" class="gs-search-results">
-              &#160;
+               
             </div><!--gs-search-topic-site-home-latest-->
             <div id="gs-search-topic-site-home-toolbar" class="toolbar gs-search-toolbar">
               <span class="ui-widget-header ui-corner-all">
@@ -72,7 +72,7 @@
             </div><!--gs-search-topic-site-home-toolbar-->
           </div><!--gs-search-->
           <div id="gs-search-topic-site-home-tasks">
-            <p>Subscribe to a <b><a type="application/atom+xml" tal:define="title string:Posts in ${options/siteName};" href="/s/search.atom?t=0&amp;f=0&amp;p=1">web feed</a>,   <a title="Next 20 topics across site" href="/s/index.html?s=&amp;g=&amp;a=&amp;t=1&amp;p=0&amp;f=0&amp;r=0&amp;i=10&amp;l=20">list more topics</a></b> or <b><a title="Latest 100 topics on this site" href="/s/index.html?s=&amp;g=&amp;a=&amp;m=&amp;t=0&amp;p=1&amp;f=0&amp;r=0&amp;i=0&amp;l=100">list individual posts</a></b> across all forums</p>
+            <p>Subscribe to a <b><a type="application/atom+xml" tal:define="title string:Posts in ${options/siteName};" href="/s/search.atom?t=0&f=0&p=1">web feed</a>,   <a title="Next 20 topics across site" href="/s/index.html?s=&g=&a=&t=1&p=0&f=0&r=0&i=10&l=20">list more topics</a></b> or <b><a title="Latest 100 topics on this site" href="/s/index.html?s=&g=&a=&m=&t=0&p=1&f=0&r=0&i=0&l=100">list individual posts</a></b> across all forums</p>
           </div><!--gs-search-topic-site-home-tasks-->
         </div><!--gs-search-topic-site-home-->
       </div><!--rightColumn-->
@@ -123,13 +123,13 @@
           <ul id="youLinks" tal:define="nn user/get_canonicalNickname">
             <li>
               <a href="#" tal:attributes="href string:/p/${nn}/email.html">Change email settings</a> 
-              &#8212; 
+              — 
               Get daily digests, go web-based, or change/add e-mail address.
             </li>
             <P></P>
             <li>
               <a href="#" tal:attributes="href string:/p/${nn}/edit.html">Update your profile</a> 
-              &#8212; 
+              — 
               <a href="#" tal:attributes="href string:/p/${nn}/">View your public profile</a>, 
               <a href="#" tal:attributes="href string:/p/${nn}/edit.html">change it</a>,
               <a href="#" tal:attributes="href string:/p/${nn}/image.html">upload a photo</a>, or 
@@ -148,7 +148,7 @@
           <p></p>
           <b>Topics Recommended on Facebook</b>
         
-          <iframe src="//www.facebook.com/plugins/recommendations.php?site=forums.e-democracy.org&amp;action&amp;width=400&amp;height=300&amp;header=false&amp;colorscheme=light&amp;linktarget=_blank&amp;border_color&amp;font=tahoma" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:300px;" allowTransparency="true"> </iframe>
+          <iframe src="//www.facebook.com/plugins/recommendations.php?site=forums.e-democracy.org&action&width=400&height=300&header=false&colorscheme=light&linktarget=_blank&border_color&font=tahoma" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:300px;" allowTransparency="true"> </iframe>
 
         </div><!--greeting-->
         <span tal:condition="python:not(user.has_role('Authenticated'))" tal:replace="structure here/introduction"></span>
