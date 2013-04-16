@@ -19,5 +19,7 @@
 !/src/placeholder
 !/test_read_ini.sh
 !/versions.cfg
+!/zmi
+!/zmi/*
 !/zope2-*.cfg
 !/ztk-*.cfg
