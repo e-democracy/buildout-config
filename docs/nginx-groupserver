@@ -1,0 +1,15 @@
+upstream uwsgi_upstream {
+    server localhost:8080;
+}
+
+server {
+    listen 80;
+    server_name samus;
+   
+    location / {
+        rewrite /(.*) /++skin++skin_gs_ogn_edem/VirtualHostBase/http/$host/groupserver/Content/initial_site/VirtualHostRoot/$1 break;
+        proxy_pass http://uwsgi_upstream/;
+        proxy_set_header INSTANCEID edemtest;
+        include proxy_params;
+    }
+}
