@@ -21,5 +21,6 @@
 !/versions.cfg
 !/zmi
 !/zmi/*
+/zmi/*~
 !/zope2-*.cfg
 !/ztk-*.cfg
