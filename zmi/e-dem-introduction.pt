@@ -1,0 +1,123 @@
+<div class="introduction">
+
+<h3>E-Democracy.org - Inspiring Inclusive Community Engagement Online</h3>
+
+
+<a href="http://forums.e-democracy.org/getinvolved"><img alt="E-Dem Logo and People" src="http://forums.e-democracy.org/groups/files/files/f/3453-2012-03-29T134456Z/logopeople2_opt.jpg" /></a>
+
+
+<h3>A Video Tour of our BeNeighbors.org Outreach</h3>
+
+<p>Check out our <a href="http://blog.e-democracy.org/posts/1816">handouts</a> from our virtual booth or watch this video:</p>
+
+<iframe width="400" height="300" src="http://www.youtube.com/embed/Csi7ldKirSI" frameborder="0" allowfullscreen></iframe>
+
+<h3>Join Local Community Forums, Global Online Communities</h3>
+
+<ul>
+<li><a href="http://forums.e-democracy.org/groups">Local Forums</a> Our 50+ local community forums online connect over 20,000 members:</li> 
+<ul>
+<li><a href="http://beneighbors.org/edemhome">Twin Cities - BeNeighbors.org</a> - Special outreach</li>
+<li><a href="http://forums.e-democracy.org/groups">United States</a></li>
+<li><a href="http://ukneighbours.org">United Kingdom</a></li>
+<li><a href="http://neighbours.cc">New Zealand</a></li>
+</ul>
+<li><a href="http://forums.e-democracy.org/groups/projects">E-Democracy.org Projects</a> - Volunteer here</li>
+<li><a href="http://forums.e-democracy.org/practice">Global Communities of Practice</a> - Get involved with digital civic engagement and inclusion</li>
+<li><a href="http://forums.e-democracy.org/login.html">Login</a> - Existing Members</li>
+</ul>
+
+
+<P>New to E-Democracy? Get <a href="http://forums.e-democracy.org/groups/news">our e-news</a>: 
+
+<form enctype="multipart/form-data"  method="post" id="register.form"
+  action="http://forums.e-democracy.org/request_registration.html">
+  <input id="form.email" name="form.email" size="20" type="text" value="enter e-mail" />
+  <input id="form.groupId" name="form.groupId" type="hidden" value="news" />
+  <input id="form.came_from" name="form.came_from" type="hidden" value="http://forums.e-democracy.org/groups/news" />
+  <input type="submit" id="form.actions.register" name="form.actions.register" value="Register" />
+</form><!--GroupSever Signup Form-->
+
+... then <a href="http://forums.e-democracy.org/groups">join some forums</a> or <a href="http://forums.e-democracy.org/about/start">get started</a> with some in-depth advice.</P>
+
+
+<h3>Video - Let's BeNeighbors.org Twin Cities</h3>
+
+<iframe width="400" height="300" src="http://www.youtube.com/embed/1K84J5NE8Fs" frameborder="0" allowfullscreen></iframe>
+
+
+
+<h3>More Pages</h3>
+
+<ul>
+<li><a href="http://e-democracy.org/start">Get Started</a> - How to details</li>
+<li><a href="http://blog.e-democracy.org">Blog</a> - News and lessons</li>
+<li><a href="http://e-democracy.org/inclusion">Inclusive Community Engagement Online</a> - Major grant-funded effort</li>
+<li><a href="http://forums.e-democracy.org/mobile">Mobile</a> - Quick links</li>
+<li><a href="http://e-democracy.org/support">Support</a> - Get help</li>
+<li><a href="http://e-democracy.org/about">About E-Democracy</a> - <a href="http://e-democracy.org/contact">Contact us</a></li>
+</ul>
+
+
+<h3>Help Us Reach 25,000 Participants!</h3>
+
+<p><a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fforums.e-democracy.org%2F">Your invitation</a> to join is powerful. <a href="http://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fforums.e-democracy.org%2F">Share us via Facebook.</a> </p>
+
+Share Site: <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#username=edemocracy"></script>
+<!-- AddThis Button END -->
+
+
+<P></P>
+
+
+<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 30000,
+  width: 400,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#3DA7D1',
+      color: '#616161'
+    },
+    tweets: {
+      background: '#fcfcfc',
+      color: '#361a36',
+      links: '#black'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    behavior: 'all'
+  }
+}).render().setUser('edemo').start();
+</script>
+
+<P></P>
+
+
+<P><b>Topics Recommended on Facebook</b>
+<iframe src="//www.facebook.com/plugins/recommendations.php?site=forums.e-democracy.org&amp;action&amp;width=400&amp;height=300&amp;header=false&amp;colorscheme=light&amp;linktarget=_blank&amp;border_color&amp;font=tahoma" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:300px;" allowTransparency="true"></iframe>
+
+
+<p>Follow us on <a href="http://www.facebook.com/edemocracyorg">Facebook</a>:</P>
+&#160;<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fedemocracyorg&amp;layout=standard&amp;show_faces=true&amp;width=300&amp;action=like&amp;font=tahoma&amp;colorscheme=light&amp;height=40"
+scrolling="no" frameborder="0" style="border:none; overflow:hidden;
+width:300px; height:80px;" allowTransparency="true"></iframe>
+
+
+
+</div>

@@ -1,0 +1,132 @@
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+  xmlns:metal="http://xml.zope.org/namespaces/metal"
+  xmlns="http://www.w3.org/2002/06/xhtml2/">
+  <head>
+    <title>Groups Homepage</title>
+    <meta property="dc:created">2006-11-23</meta>
+    <meta property="dc:publisher">OnlineGroups.Net</meta>
+    <meta property="dc:rightsHolder">OnlineGroups.Net</meta>
+    <meta property="dc:creator">Michael JasonSmith</meta>
+    <meta property="dc:description">
+      A list of all groups on eDem.org.
+    </meta>
+    <meta property="dc:licence"/>
+    <!--Uncomment the following and add your name, if you make-->
+    <!--  any modifications-->
+    <!--<meta property="dc:contributor"></meta>-->
+  </head>
+  <body>
+    <section tal:define="site here/Scripts/get/division_object;
+      siteName python:modules['Products.XWFCore.XWFUtils'].getOption(here, 'siteName') or site.title_or_id();
+      userAuthenticated python:user.has_role('Authenticated');
+      userAnonymous python:user.has_role('Anonymous');
+      isSiteAdmin python:'DivisionAdmin' in user.getRolesInContext(site);
+      collatedGroups python:here.collate_groups(site, user);
+      groupsObj python:collatedGroups[0];
+      groups python:collatedGroups[1];
+      userGroups python:collatedGroups[2];
+      nonUserGroups python:collatedGroups[3]; 
+      joinableGroups python:collatedGroups[4];
+      otherGroups python:collatedGroups[5]">
+
+      <h><span class="site" tal:content="siteName"/></h>
+      
+      <p tal:condition="userAuthenticated">
+        This page shows the online groups that are currently visible to you.
+        <a class="helpLink" href="/help/manual/#groupserver-managing-groups" 
+          title="Managing Groups Help">[?]</a>
+      </p>
+      <p tal:condition="not:userAuthenticated">
+        This page shows all the online groups (Issues Forums, etc.) that are visible to anyone. Generally, they are listed by country first and state second.  For each state, the city and neighborhood forums are listed. 
+        <span tal:condition="python:len(groups)==0">This site may contain
+          online groups that are visible only to logged in members;</span>
+        <a tal:attributes="title string:Please login to ${siteName}"
+          href="/login.html?came_from=/groups">Login</a> to see the forums
+        of which you are member or <a tal:attributes="title string:Register for ${siteName}"
+          href="/request_registration.html?came_from=/groups">register</a> and to join one or more forums. 
+      </p>
+      <p class="adminTasks" tal:condition="isSiteAdmin" >
+        As a site administrator you can
+        <a title="Start a group"  href="/admindivision/start_a_group/">Start
+          a group.</a>
+      </p>
+      
+      <section id="your-groups" tal:condition="userGroups">
+        <h>Your Forums</h>
+        <p>You belong to the following forums.</p>
+        <ol>
+          <li tal:repeat="group userGroups">
+            <a class="group" tal:content="group/title_or_id"
+              tal:attributes="title string:${group/title_or_id} Homepage;
+              href string:/groups/${group/getId}"/>:
+            <tal:block
+              tal:define="member_count python:here.Scripts.get.group_member_count(group)">
+               
+              
+              <span tal:replace="member_count"/>
+              <span tal:replace="python:member_count == 1 and 'member' or 'members'"/>.
+            </tal:block>
+            <a tal:attributes="title string:Leave ${group/title_or_id};
+              href string:/groups/leave.html?groupId=${group/getId}">(leave)</a>
+          </li>
+        </ol>
+      </section><!--your-groups-->
+
+      <section tal:define="categories python:here.group_categories(groups);
+        categoryNames python:here.sort_category_keys(categories.keys())"
+        tal:condition="python:userAnonymous or (joinableGroups or otherGroups)">
+        <h tal:condition="not:userAnonymous">Other Forums</h>
+        
+        <p tal:condition="not:userAnonymous">
+          You are not a member of the following forums, but you may
+          view them, and possibly join some.
+        </p>
+        
+        <section tal:repeat="categoryName categoryNames">
+          <tal:block 
+            tal:define="category python:categories[categoryName];
+            fora python:filter(lambda f: f not in userGroups, category);
+            sortedFora python:here.sort_groups_by_title(fora);" 
+            tal:condition="fora">
+            <h tal:content="categoryName">Category Name</h>
+            <ul>
+              <tal:block tal:repeat="forum sortedFora">
+
+                <!-- Next tal added by Tim Erickson to hide groups without categoryName  -->
+                <tal:block condition="python:categoryName">
+
+                <li tal:condition="python:forum not in userGroups"
+                  tal:define="member_count python:here.Scripts.get.group_member_count(forum);
+                  realLifeGroup python:forum.getProperty('real_life_group','');
+                  description python:forum.getProperty('description', '')">
+                  <span class="group" 
+                    tal:attributes="href forum/getId"
+                    tal:content="forum/title_or_id">Wibble</span>:
+
+                  <tal:block tal:condition="description"> 
+                    <!-- for eDem -->
+                    <span class="realLifeGroup" tal:content="description"/>;
+                  </tal:block>
+                  <span tal:replace="member_count"/>
+                  <span tal:replace="python:member_count == 1 and 'member' or 'members'"/>.
+                  <a href="#" title="Join this forum"
+                    tal:condition="python:userAuthenticated and (forum in joinableGroups)"
+                    tal:attributes="href string:/groups/${forum/getId}/join.html;
+                    title string:Join ${forum/title_or_id}">(Join this forum.)</a>
+                  <a href="#" title="Register, and join this forum"
+                    tal:condition="python:(not userAuthenticated) and (forum in joinableGroups)"
+                    tal:attributes="href string:request_registration.html?form.groupId=${forum/getId}">(register and join)</a>
+                  <tal:block tal:define="joinability python:here.Scripts.get.group_joinability(site.getId(), forum.getId())"
+                    tal:condition="python:joinability == 'invite'">
+                    <!--(Only invited members can join this forum.)-->
+                  </tal:block>
+                </li></tal:block>
+              </tal:block>
+            </ul>
+          </tal:block>
+        </section>
+      </section>
+
+    </section>
+  </body>
+</html>
