@@ -17,6 +17,10 @@
 !/README.txt
 !/src
 !/src/placeholder
+!/src/empty_egg_git
+!/src/empty_egg_git/*
+!/src/empty_egg_hg
+!/src/empty_egg_hg/*
 !/test_read_ini.sh
 !/versions.cfg
 !/zmi
