@@ -1,4 +1,4 @@
-# coding=utf-8
+# -*- coding=utf-8 -*-
 import os
 from setuptools import setup, find_packages
 from version import get_version
@@ -24,8 +24,8 @@ setup(name='edem.group.messages.post',
     keywords='',
     author='Bill Bushey',
     author_email='bill.bushey@e-democracy.org',
-    url='http://forums.e-democracy.org/',
-    license='other',
+    url='http://www.e-democracy.org/',
+    license='GPL 3',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['edem', 'edem.group', 'edem.group.messages'], 
     include_package_data=True,
