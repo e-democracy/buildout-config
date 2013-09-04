@@ -10,6 +10,7 @@ setup(name='edem.group.messages.post',
     description="Customized version of GroupServer's topics digest for E-Democracy",
     long_description=open("README.txt").read() + "\n" +
                       open(os.path.join("docs", "HISTORY.txt")).read(),
+    # See https://pypi.python.org/pypi?%3Aaction=list_classifiers for values
     classifiers=[
       "Development Status :: 1 - Planning",
       "Environment :: Web Environment",
