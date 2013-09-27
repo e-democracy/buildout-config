@@ -10,7 +10,7 @@ EGG PURPOSE
 :Date: DATE CREATED
 :Organization: `CREATING ORGANIZATION`_
 :Copyright: This document is licensed under a
-  `Creative Commons Attribution-Share Alike 3.0`_
+  `Creative Commons Attribution-Share Alike 3.0 License`_
   by `CREATING ORGANIZATION`_.
 
 Introduction
@@ -29,5 +29,5 @@ Resources
 .. _GroupServer.org: http://groupserver.org/
 .. _OnlineGroups.Net: https://onlinegroups.net
 .. _Michael JasonSmith: http://groupserver.org/p/mpj17
-.. _Creative Commons Attribution-Share Alike 3.0 New Zealand License:
-   http://creativecommons.org/licenses/by-sa/3.0/nz/
+.. _Creative Commons Attribution-Share Alike 3.0 License:
+   http://creativecommons.org/licenses/by-sa/3.0/
