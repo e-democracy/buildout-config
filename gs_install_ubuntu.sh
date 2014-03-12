@@ -88,8 +88,6 @@ echo "Python setup complete."
 echo
 echo "Installing GroupServer"
 echo
-# Create link between config file GroupServer expects and the one installation creates
-ln etc/gsconfig.ini parts/instance/etc/gsconfig.ini
 buildout -N
 # Buildout has its own "completed" message.
 
