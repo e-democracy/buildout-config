@@ -81,7 +81,7 @@ ln -s /usr/lib/python2.7/dist-packages/libxsltmod.so lib/python2.7/site-packages
 ln -s /usr/lib/python2.7/dist-packages/libxml2mod.so lib/python2.7/site-packages/
 ln -s /usr/lib/python2.7/dist-packages/libxml2.py lib/python2.7/site-packages/
 # Fetch the system that builds GroupServer
-pip install zc.buildout==1.6.3
+pip install zc.buildout==1.7.1
 echo
 echo "Python setup complete."
 
