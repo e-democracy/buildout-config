@@ -16,7 +16,9 @@
 !/parts/placeholder
 !/read_ini.sh
 !/rebuild.sh
+!/README.rst
 !/README.txt
+!/README-Buildout.txt
 !/src
 !/src/placeholder
 !/src/empty_egg_git
