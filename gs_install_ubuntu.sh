@@ -82,7 +82,7 @@ ln -s /usr/lib/python2.7/dist-packages/libxml2mod.so lib/python2.7/site-packages
 ln -s /usr/lib/python2.7/dist-packages/libxml2.py lib/python2.7/site-packages/
 # Fetch the system that builds GroupServer
 pip install -U pip
-pip install -U zc.buildout distribute mr.developer
+pip install -U zc.buildout setuptools distribute mr.developer
 echo
 echo "Python setup complete."
 
