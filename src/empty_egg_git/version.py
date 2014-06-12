@@ -36,7 +36,7 @@ def parse_version_from_package():
 
     version_string = ''
     if os.path.exists(pkginfo):
-        for line in file(pkginfo):
+        for line in open(pkginfo):
             if line.find('Version: ') == 0:
                 version_string = line.strip().split('Version: ')[1].strip()
         if not version_string:
