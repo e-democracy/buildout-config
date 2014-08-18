@@ -75,11 +75,11 @@ echo
 # Create the Python environment
 virtualenv --no-site-packages . 
 . ./bin/activate
-echo -e "import sys\n\nsys.setdefaultencoding('utf-8')" > lib/python2.7/site-packages/sitecustomize.py
-ln -s /usr/lib/python2.7/dist-packages/libxslt.py lib/python2.7/site-packages/libxslt.py
-ln -s /usr/lib/python2.7/dist-packages/libxsltmod.so lib/python2.7/site-packages/
-ln -s /usr/lib/python2.7/dist-packages/libxml2mod.so lib/python2.7/site-packages/
-ln -s /usr/lib/python2.7/dist-packages/libxml2.py lib/python2.7/site-packages/
+#echo -e "import sys\n\nsys.setdefaultencoding('utf-8')" > lib/python2.7/site-packages/sitecustomize.py
+#ln -s /usr/lib/python2.7/dist-packages/libxslt.py lib/python2.7/site-packages/libxslt.py
+#ln -s /usr/lib/python2.7/dist-packages/libxsltmod.so lib/python2.7/site-packages/
+#ln -s /usr/lib/python2.7/dist-packages/libxml2mod.so lib/python2.7/site-packages/
+#ln -s /usr/lib/python2.7/dist-packages/libxml2.py lib/python2.7/site-packages/
 # Fetch the system that builds GroupServer
 pip install -U pip
 pip install -U zc.buildout setuptools distribute mr.developer
