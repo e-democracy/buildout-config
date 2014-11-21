@@ -36,7 +36,6 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        'edem.skin',
         # -*- Extra requirements: -*-
     ],
     entry_points="""
